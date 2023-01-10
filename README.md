@@ -1,4 +1,7 @@
 # Tmux VPN Status
+
+**Note:** This plugin has been modified specifically for use with ProtonVPN. Only tested on Linux.
+
 Simple plugin to show whether VPN is active in Tmux.
 
 Adds `#{vpn_status}` format.
@@ -11,7 +14,7 @@ Contributions are welcome.
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
 
-    set -g @plugin 'Rizhiy/tmux-vpn-status'
+    set -g @plugin 's6muel/tmux-vpn-status'
 
 Hit `prefix + I` to fetch the plugin and source it.
 
