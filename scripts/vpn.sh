@@ -6,17 +6,17 @@ source "$CURRENT_DIR/helpers.sh"
 
 vpn_status() {
 	if command_exists "ifconfig"; then
-		tunnel=$(ifconfig | grep tun)
+		tunnel=$(ifconfig | grep proton0)
 	elif command_exists "ip"; then
-		tunnel=$(ip a | grep tun)
+		tunnel=$(ip a | grep proton0)
 	else
 		echo "Can't check connection"
 		return
 	fi
 	if [ -n "$tunnel" ]; then
-		echo "Connected"
+		echo "⇅"
 	else
-		echo "Disconnected"
+		echo "↓"
 	fi
 }
 
